@@ -118,6 +118,11 @@ mpm start
 4. Edit questions.json or fetch data from Firebase
 5. Deploy with Firebase Hosting or Vercel
 
+## 🚀 Run in codespace
+1. Open the main brach in github codespace, "Create main in codespace" 
+2. Upon code space start, let all modules to be installed
+3. npm start to run the project
+
 ---
 
 ## 📜 License
