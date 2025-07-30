@@ -112,6 +112,7 @@ Start with a static dataset:
 
 ```bash
 npm run dev
+mpm start
 ```
 
 4. Edit questions.json or fetch data from Firebase
