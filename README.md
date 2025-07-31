@@ -1,6 +1,6 @@
-# 🧠 PsychMeOut — Fast-Paced Psychology Quiz App
+# 🧠 PsychMeUp — Fast-Paced Psychology Quiz App
 
-PsychMeOut is a fast-paced, single-player quiz app built in React, designed to help students review and reinforce core concepts from introductory psychology courses. The app gamifies learning through a timed, interactive quiz experience focused on speed, accuracy, and memory recall.
+PsychMeUp is a fast-paced, single-player quiz app built in React, designed to help students review and reinforce core concepts from introductory psychology courses. The app gamifies learning through a timed, interactive quiz experience focused on speed, accuracy, and memory recall.
 
 ---
 
