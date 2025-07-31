@@ -1,0 +1,70 @@
+[
+  {
+    "difficulty": "easy",
+    "question": "What is the main ingredient in guacamole?",
+    "options": ["Tomato", "Avocado", "Onion", "Pepper"],
+    "correctIndex": 1,
+    "funFact": "Guacamole is a traditional Mexican dip."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which fruit is known as the 'king of fruits'?",
+    "options": ["Apple", "Banana", "Mango", "Pineapple"],
+    "correctIndex": 2,
+    "funFact": "Mangoes are the national fruit of India."
+  },
+  {
+    "difficulty": "easy",
+    "question": "What beverage is made from leaves and is popular worldwide?",
+    "options": ["Coffee", "Tea", "Juice", "Soda"],
+    "correctIndex": 1,
+    "funFact": "Tea is the second most consumed drink after water."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which vegetable is known for making people cry when cut?",
+    "options": ["Carrot", "Onion", "Potato", "Pepper"],
+    "correctIndex": 1,
+    "funFact": "Onions release a gas that irritates the eyes."
+  },
+  {
+    "difficulty": "easy",
+    "question": "What is sushi traditionally wrapped in?",
+    "options": ["Rice paper", "Seaweed", "Lettuce", "Tortilla"],
+    "correctIndex": 1,
+    "funFact": "The seaweed used is called 'nori'."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which nut is used to make marzipan?",
+    "options": ["Almond", "Peanut", "Cashew", "Walnut"],
+    "correctIndex": 0,
+    "funFact": "Marzipan is popular in European desserts."
+  },
+  {
+    "difficulty": "easy",
+    "question": "What is the main ingredient in hummus?",
+    "options": ["Lentils", "Chickpeas", "Beans", "Peas"],
+    "correctIndex": 1,
+    "funFact": "Hummus is a staple in Middle Eastern cuisine."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which fruit has its seeds on the outside?",
+    "options": ["Blueberry", "Strawberry", "Raspberry", "Blackberry"],
+    "correctIndex": 1,
+    "funFact": "A strawberry has about 200 seeds on its surface."
+  },
+  {
+    "difficulty": "easy",
+    "question": "What is tofu made from?",
+    "options": ["Rice", "Soybeans", "Wheat", "Corn"],
+    "correctIndex": 1,
+    "funFact": "Tofu is a great source of plant-based protein."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which country is famous for pizza and pasta?",
+    "options": ["France", "Italy", "Spain", "Greece"],
+    "correctIndex": 1,
+    "funFact": "Italy is known for its rich culinary

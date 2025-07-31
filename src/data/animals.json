@@ -1,0 +1,72 @@
+[
+  {
+    "difficulty": "easy",
+    "question": "What is the largest land animal?",
+    "options": ["Elephant", "Giraffe", "Hippopotamus", "Rhinoceros"],
+    "correctIndex": 0,
+    "funFact": "African elephants can weigh up to 6,000 kg."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which animal is known as the King of the Jungle?",
+    "options": ["Tiger", "Lion", "Leopard", "Cheetah"],
+    "correctIndex": 1,
+    "funFact": "Lions live in groups called prides."
+  },
+  {
+    "difficulty": "easy",
+    "question": "What is the fastest land animal?",
+    "options": ["Cheetah", "Leopard", "Horse", "Gazelle"],
+    "correctIndex": 0,
+    "funFact": "Cheetahs can run up to 70 mph (113 km/h)."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which bird is a universal symbol of peace?",
+    "options": ["Eagle", "Dove", "Sparrow", "Owl"],
+    "correctIndex": 1,
+    "funFact": "Doves are often released at ceremonies to symbolize peace."
+  },
+  {
+    "difficulty": "easy",
+    "question": "What do pandas mainly eat?",
+    "options": ["Bamboo", "Fish", "Grass", "Fruits"],
+    "correctIndex": 0,
+    "funFact": "A panda can eat up to 38 kg of bamboo in a day."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which animal is known for changing its color?",
+    "options": ["Chameleon", "Frog", "Snake", "Lizard"],
+    "correctIndex": 0,
+    "funFact": "Chameleons change color to communicate and regulate temperature."
+  },
+  {
+    "difficulty": "easy",
+    "question": "What is the tallest animal in the world?",
+    "options": ["Elephant", "Giraffe", "Camel", "Horse"],
+    "correctIndex": 1,
+    "funFact": "Giraffes can be up to 18 feet tall."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which mammal can fly?",
+    "options": ["Bat", "Squirrel", "Monkey", "Rat"],
+    "correctIndex": 0,
+    "funFact": "Bats are the only mammals capable of sustained flight."
+  },
+  {
+    "difficulty": "easy",
+    "question": "What is a baby kangaroo called?",
+    "options": ["Cub", "Joey", "Calf", "Pup"],
+    "correctIndex": 1,
+    "funFact": "A joey stays in its mother's pouch for several months."
+  },
+  {
+    "difficulty": "easy",
+    "question": "Which animal is famous for its black and white stripes?",
+    "options": ["Tiger", "Zebra", "Panda", "Skunk"],
+    "correctIndex": 1,
+    "funFact": "No two zebras have the same stripe pattern."
+  }
+]
