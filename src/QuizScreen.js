@@ -47,9 +47,6 @@ function QuizScreen({ questions, onQuizComplete }) {
   return (
     <Container maxWidth="sm" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
       <Typography variant="h6" component="div" gutterBottom>
-        Question {currentQuestionIndex + 1} of {questions.length}
-      </Typography>
-      <Typography variant="h6" component="div" gutterBottom>
         Score: {score}
       </Typography>
       <Box sx={{ width: '100%', mb: 2 }}>
