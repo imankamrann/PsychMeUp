@@ -1,5 +1,15 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Container, Typography, Button, Paper, RadioGroup, FormControlLabel, Radio, Box, LinearProgress } from '@mui/material';
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  Container,
+  Typography,
+  Button,
+  Paper,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+  Box,
+  LinearProgress,
+} from "@mui/material";
 
 function QuizScreen({ questions, onQuizComplete }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -9,26 +19,29 @@ function QuizScreen({ questions, onQuizComplete }) {
 
   const currentQuestion = questions[currentQuestionIndex];
 
-  const handleAnswerSubmit = useCallback((selectedIndex) => {
-    const newUserAnswers = [...userAnswers, selectedIndex];
-    setUserAnswers(newUserAnswers);
+  const handleAnswerSubmit = useCallback(
+    (selectedIndex) => {
+      const newUserAnswers = [...userAnswers, selectedIndex];
+      setUserAnswers(newUserAnswers);
 
-    // Move to the next question immediately after answer is submitted
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedAnswerIndex(null); // Reset selected answer for the next question
-      setTimeLeft(10); // Reset timer for the next question
-    } else {
-      // Calculate score and complete quiz
-      let score = 0;
-      for (let i = 0; i < questions.length; i++) {
-        if (newUserAnswers[i] === questions[i].correctIndex) {
-          score++;
+      // Move to the next question immediately after answer is submitted
+      if (currentQuestionIndex < questions.length - 1) {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+        setSelectedAnswerIndex(null); // Reset selected answer for the next question
+        setTimeLeft(10); // Reset timer for the next question
+      } else {
+        // Calculate score and complete quiz
+        let score = 0;
+        for (let i = 0; i < questions.length; i++) {
+          if (newUserAnswers[i] === questions[i].correctIndex) {
+            score++;
+          }
         }
+        onQuizComplete(score, newUserAnswers);
       }
-      onQuizComplete(score, newUserAnswers);
-    }
-  }, [userAnswers, currentQuestionIndex, questions.length, onQuizComplete]);
+    },
+    [userAnswers, currentQuestionIndex, questions.length, onQuizComplete]
+  );
 
   useEffect(() => {
     if (timeLeft > 0) {
@@ -48,15 +61,33 @@ function QuizScreen({ questions, onQuizComplete }) {
   };
 
   return (
-    <Container maxWidth="sm" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-      <Typography variant="h6" component="div" gutterBottom>
+    <Container
+      maxWidth="sm"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <Typography variant="h6" component="div" gutterBottom style={{ fontWeight: "bold" }}
+      >
         Question {currentQuestionIndex + 1} of {questions.length}
       </Typography>
-      <Box sx={{ width: '100%', mb: 2 }}>
+      <Box sx={{ width: "100%", mb: 2 }}>
         <LinearProgress variant="determinate" value={(timeLeft / 10) * 100} />
-        <Typography variant="body2" color="text.secondary" align="center">{timeLeft}s left</Typography>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          align="center"
+          style={{ color: "white" }}
+          marginTop={"10px"}
+        >
+          {timeLeft}s left
+        </Typography>
       </Box>
-      <Paper elevation={3} sx={{ padding: 3, width: '100%' }}>
+      <Paper elevation={3} sx={{ padding: 3, width: "100%" }}>
         <Typography variant="h5" component="h2" gutterBottom>
           {currentQuestion.question}
         </Typography>

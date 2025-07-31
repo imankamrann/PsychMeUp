@@ -11,7 +11,7 @@ function ResultsScreen({ score, questions, userAnswers, onRestartQuiz }) {
         Your Score: {score} out of {questions.length}
       </Typography>
       <Paper elevation={3} sx={{ padding: 3, width: '100%', mt: 3 }}>
-        <Typography variant="h6" component="h2" gutterBottom>
+        <Typography variant="h6" component="h2" gutterBottom style={{ fontWeight: "bold" }}>
           Summary
         </Typography>
         {questions.map((question, index) => (
@@ -19,7 +19,7 @@ function ResultsScreen({ score, questions, userAnswers, onRestartQuiz }) {
             <Typography variant="body1" fontWeight="bold">
               Q{index + 1}: {question.question}
             </Typography>
-            <Typography variant="body2" color={userAnswers[index] === question.correctIndex ? 'success.main' : 'error.main'}>
+            <Typography variant="body2" color={userAnswers[index] === question.correctIndex ? 'success.main' : 'error.main'} style={{ fontStyle: "italic" }}>
               Your Answer: {userAnswers[index] !== null ? question.options[userAnswers[index]] : 'No answer'}
             </Typography>
             <Typography variant="body2">

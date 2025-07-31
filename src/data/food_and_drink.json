@@ -67,4 +67,6 @@
     "question": "Which country is famous for pizza and pasta?",
     "options": ["France", "Italy", "Spain", "Greece"],
     "correctIndex": 1,
-    "funFact": "Italy is known for its rich culinary
+    "funFact": "Italy is known for its rich culinary."
+  }
+]
