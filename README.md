@@ -6,7 +6,7 @@ PsychMeOut is a fast-paced, single-player quiz app built in React, designed to h
 
 ## 🔍 Project Overview
 
-* Single-player quiz focused on psychology facts and core concepts
+* Single-player quiz focused on fun facts and core concepts
 * Timed, multiple-choice format
 * Immediate feedback with fun facts
 * Designed for quick study sessions and test prep
