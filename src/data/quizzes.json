@@ -1,0 +1,17 @@
+[
+  {
+    "id": "foodAnDrink",
+    "title": "Food and Drink Quiz",
+    "file": "food_and_drink.json"
+  },
+  {
+    "id": "animalQuiz",
+    "title": "Animal Quiz",
+    "file": "animals.json"
+  },
+   {
+    "id": "countryQuiz",
+    "title": "Country Quiz",
+    "file": "countryQuiz.json"
+  }
+]

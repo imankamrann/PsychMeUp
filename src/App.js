@@ -1,44 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import HomeScreen from './HomeScreen';
-import QuizScreen from './QuizScreen';
-import ResultsScreen from './ResultsScreen';
-import questionsData from './data/questions.json'; // Load the questions data
+import React, { useState } from "react";
+import Dashboard from "./Dashboard";
+import QuizScreen from "./QuizScreen";
+import ResultsScreen from "./ResultsScreen";
 
 function App() {
-  const [currentScreen, setCurrentScreen] = useState('home'); // 'home', 'quiz', 'results'
+  const [currentScreen, setCurrentScreen] = useState("dashboard"); // 'dashboard', 'quiz', 'results'
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [finalScore, setFinalScore] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
 
-  const startQuiz = (difficulty) => {
-    // Filter questions based on difficulty (not implemented in data yet, so use all)
-    const filteredQuestions = questionsData; // Replace with filtering logic later
-    setQuizQuestions(filteredQuestions);
-    setUserAnswers([]); // Reset user answers for a new quiz
-    setCurrentScreen('quiz');
+  const loadQuizData = async (quizFile) => {
+    try {
+      const module = await import(`./data/quizzes/${quizFile}`);
+      setQuizQuestions(module.default);
+      setCurrentScreen("quiz");
+    } catch (error) {
+      console.error("Failed to load quiz data:", error);
+    }
   };
 
-  const handleQuizComplete = (score, userAnswers) => {
+  const handleQuizComplete = (score, answers) => {
     setFinalScore(score);
-    setUserAnswers(userAnswers); // Store user answers
-    setCurrentScreen('results');
+    setUserAnswers(answers);
+    setCurrentScreen("results");
   };
 
   const restartQuiz = () => {
-    setCurrentScreen('home');
-    setFinalScore(0);
+    setCurrentScreen("dashboard");
     setQuizQuestions([]);
-    setUserAnswers([]); // Clear user answers on restart
+    setFinalScore(0);
+    setUserAnswers([]);
   };
 
   return (
     <div className="App">
-      {currentScreen === 'home' && <HomeScreen onStartQuiz={startQuiz} />}
-      {currentScreen === 'quiz' && (
-        <QuizScreen questions={quizQuestions} onQuizComplete={handleQuizComplete} />
+      {currentScreen === "dashboard" && (
+        <Dashboard onSelectQuiz={loadQuizData} />
       )}
-      {currentScreen === 'results' && (
-        <ResultsScreen questions={quizQuestions} score={finalScore} userAnswers={userAnswers} onRestartQuiz={restartQuiz} />
+      {currentScreen === "quiz" && (
+        <QuizScreen
+          questions={quizQuestions}
+          onQuizComplete={handleQuizComplete}
+        />
+      )}
+      {currentScreen === "results" && (
+        <ResultsScreen
+          questions={quizQuestions}
+          score={finalScore}
+          userAnswers={userAnswers}
+          onRestartQuiz={restartQuiz}
+        />
       )}
     </div>
   );
