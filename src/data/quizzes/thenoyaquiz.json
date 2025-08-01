@@ -1,0 +1,14 @@
+[
+  {
+    "difficulty": "hard",
+    "question": "Hair colour?",
+    "options": [
+      "red",
+      "brown",
+      "blue",
+      "blonde"
+    ],
+    "correctIndex": 1,
+    "funFact": "noya dyed her hair many time! even blue once!!!"
+  }
+]

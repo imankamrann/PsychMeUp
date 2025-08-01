@@ -13,5 +13,11 @@
     "id": "countryQuiz",
     "title": "Country Quiz",
     "file": "countryQuiz.json"
+  },
+    {
+    "id": "noyaTest",
+    "title": "Noya Quiz",
+    "file": "thenoyaquiz.json"
   }
+
 ]

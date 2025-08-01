@@ -11,7 +11,7 @@ import {
   LinearProgress,
 } from "@mui/material";
 
-function QuizScreen({ questions, onQuizComplete }) {
+function QuizScreen({ questions, onQuizComplete, onBack }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [timeLeft, setTimeLeft] = useState(10); // 10 seconds per question
@@ -71,7 +71,19 @@ function QuizScreen({ questions, onQuizComplete }) {
         minHeight: "100vh",
       }}
     >
-      <Typography variant="h6" component="div" gutterBottom style={{ fontWeight: "bold" }}
+      <Button
+        onClick={onBack}
+        color="secondary"
+        variant="contained"
+        sx={{ marginBottom: "20px" }}
+      >
+        Back to Dashboard
+      </Button>
+      <Typography
+        variant="h6"
+        component="div"
+        gutterBottom
+        style={{ fontWeight: "bold" }}
       >
         Question {currentQuestionIndex + 1} of {questions.length}
       </Typography>

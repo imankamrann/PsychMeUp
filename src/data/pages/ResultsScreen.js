@@ -40,7 +40,7 @@ function ResultsScreen({ score, questions, userAnswers, onRestartQuiz }) {
         onClick={onRestartQuiz}
         sx={{ mt: 3 }}
       >
-        Restart Quiz
+        Go to Dashboard
       </Button>
     </Container>
   );
